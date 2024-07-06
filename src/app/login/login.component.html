@@ -1,0 +1,24 @@
+<div style="min-height: 100vh;" class="d-flex justify-content-center align-items-center w-100">
+    <div class="w-75 border rounded p-5 card shadow">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid" [src]="login_url" alt="">
+            </div>
+            <div class="col-lg-6">
+                <h1>Login form</h1>
+                <p [class]="css_style">{{description}}</p>
+                <form>
+                    <div class="mb-3">
+                        <input (change)="getUsername($event)" type="text" class="form-control" placeholder="Username">
+                    </div>
+                    <div class="mb-3">
+                        <input #pswd type="text" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="mb-3">
+                        <input (click)="login(pswd)" type="button" class="btn btn-primary" value="Login" placeholder="">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

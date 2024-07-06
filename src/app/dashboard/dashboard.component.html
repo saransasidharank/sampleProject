@@ -1,0 +1,37 @@
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://i.pinimg.com/736x/79/1f/84/791f846ada8f10df721c42328e78e970.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Demo
+      </a>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h1>Welcome <span class="text-primary">{{user}}</span></h1>
+    <div class="m-5 border rounded p-5 d-flex justify-content-between">
+      <input [(ngModel)]="hobbies" placeholder="Enter your hobbies" type="text" class="form-control">
+      <button class="btn btn-success ms-4">Submit</button>
+    </div>
+    <p *ngIf="hobbies" class="fs-3 text-danger"> Hobbies are: {{hobbies}} </p>
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of allEmployee; let i=index">
+          <td>{{i+1}}</td>
+          <td>{{emp.empId}}</td>
+          <td>{{emp.empName}}</td>
+          <td>{{emp.empSalary}}</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
